@@ -10,3 +10,6 @@ Automation tooling + analysis for mutation testing open-source Python projects.
 ## Structure
 - `projects/` — each target project (scripts, config, patches, results)
 - `docs/` — methodology notes
+
+## Case Studies
+- TheAlgorithms/Python — mutation testing on Haralick descriptor implementation

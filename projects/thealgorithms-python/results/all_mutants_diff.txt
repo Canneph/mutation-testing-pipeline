@@ -1,0 +1,3180 @@
+# haralick_descriptors.x_root_mean_square_error__mutmut_1: timeout
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -10,4 +10,4 @@
+         >>> root_mean_square_error(np.array([1, 2, 3]), np.array([6, 4, 2]))
+         3.1622776601683795
+     """
+-    return float(np.sqrt(((original - reference) ** 2).mean()))
++    return float(None)
+# haralick_descriptors.x_root_mean_square_error__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -10,4 +10,4 @@
+         >>> root_mean_square_error(np.array([1, 2, 3]), np.array([6, 4, 2]))
+         3.1622776601683795
+     """
+-    return float(np.sqrt(((original - reference) ** 2).mean()))
++    return float(np.sqrt(None))
+# haralick_descriptors.x_root_mean_square_error__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -10,4 +10,4 @@
+         >>> root_mean_square_error(np.array([1, 2, 3]), np.array([6, 4, 2]))
+         3.1622776601683795
+     """
+-    return float(np.sqrt(((original - reference) ** 2).mean()))
++    return float(np.sqrt(((original - reference) * 2).mean()))
+# haralick_descriptors.x_root_mean_square_error__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -10,4 +10,4 @@
+         >>> root_mean_square_error(np.array([1, 2, 3]), np.array([6, 4, 2]))
+         3.1622776601683795
+     """
+-    return float(np.sqrt(((original - reference) ** 2).mean()))
++    return float(np.sqrt(((original + reference) ** 2).mean()))
+# haralick_descriptors.x_root_mean_square_error__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -10,4 +10,4 @@
+         >>> root_mean_square_error(np.array([1, 2, 3]), np.array([6, 4, 2]))
+         3.1622776601683795
+     """
+-    return float(np.sqrt(((original - reference) ** 2).mean()))
++    return float(np.sqrt(((original - reference) ** 3).mean()))
+# haralick_descriptors.x_normalize_image__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -1,5 +1,5 @@
+ def normalize_image(
+-    image: np.ndarray, cap: float = 255.0, data_type: np.dtype = np.uint8
++    image: np.ndarray, cap: float = 256.0, data_type: np.dtype = np.uint8
+ ) -> np.ndarray:
+     """
+     Normalizes image in Numpy 2D array format, between ranges 0-cap,
+# haralick_descriptors.x_normalize_image__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -21,5 +21,5 @@
+         array([[127, 127,  85],
+                [  0, 255,  42]], dtype=uint8)
+     """
+-    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
++    normalized = None
+     return normalized.astype(data_type)
+# haralick_descriptors.x_normalize_image__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -21,5 +21,5 @@
+         array([[127, 127,  85],
+                [  0, 255,  42]], dtype=uint8)
+     """
+-    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
++    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) / cap
+     return normalized.astype(data_type)
+# haralick_descriptors.x_normalize_image__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -21,5 +21,5 @@
+         array([[127, 127,  85],
+                [  0, 255,  42]], dtype=uint8)
+     """
+-    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
++    normalized = (image - np.min(image)) * (np.max(image) - np.min(image)) * cap
+     return normalized.astype(data_type)
+# haralick_descriptors.x_normalize_image__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -21,5 +21,5 @@
+         array([[127, 127,  85],
+                [  0, 255,  42]], dtype=uint8)
+     """
+-    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
++    normalized = (image + np.min(image)) / (np.max(image) - np.min(image)) * cap
+     return normalized.astype(data_type)
+# haralick_descriptors.x_normalize_image__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -21,5 +21,5 @@
+         array([[127, 127,  85],
+                [  0, 255,  42]], dtype=uint8)
+     """
+-    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
++    normalized = (image - np.min(None)) / (np.max(image) - np.min(image)) * cap
+     return normalized.astype(data_type)
+# haralick_descriptors.x_normalize_image__mutmut_7: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -21,5 +21,5 @@
+         array([[127, 127,  85],
+                [  0, 255,  42]], dtype=uint8)
+     """
+-    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
++    normalized = (image - np.min(image)) / (np.max(image) + np.min(image)) * cap
+     return normalized.astype(data_type)
+# haralick_descriptors.x_normalize_image__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -21,5 +21,5 @@
+         array([[127, 127,  85],
+                [  0, 255,  42]], dtype=uint8)
+     """
+-    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
++    normalized = (image - np.min(image)) / (np.max(None) - np.min(image)) * cap
+     return normalized.astype(data_type)
+# haralick_descriptors.x_normalize_image__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -21,5 +21,5 @@
+         array([[127, 127,  85],
+                [  0, 255,  42]], dtype=uint8)
+     """
+-    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
++    normalized = (image - np.min(image)) / (np.max(image) - np.min(None)) * cap
+     return normalized.astype(data_type)
+# haralick_descriptors.x_normalize_image__mutmut_10: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -22,4 +22,4 @@
+                [  0, 255,  42]], dtype=uint8)
+     """
+     normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
+-    return normalized.astype(data_type)
++    return normalized.astype(None)
+# haralick_descriptors.x_normalize_array__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -1,4 +1,4 @@
+-def normalize_array(array: np.ndarray, cap: float = 1) -> np.ndarray:
++def normalize_array(array: np.ndarray, cap: float = 2) -> np.ndarray:
+     """Normalizes a 1D array, between ranges 0-cap.
+ 
+     Args:
+# haralick_descriptors.x_normalize_array__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -16,5 +16,5 @@
+                [0.75],
+                [1.  ]])
+     """
+-    diff = np.max(array) - np.min(array)
++    diff = None
+     return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
+# haralick_descriptors.x_normalize_array__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -16,5 +16,5 @@
+                [0.75],
+                [1.  ]])
+     """
+-    diff = np.max(array) - np.min(array)
++    diff = np.max(array) + np.min(array)
+     return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
+# haralick_descriptors.x_normalize_array__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -16,5 +16,5 @@
+                [0.75],
+                [1.  ]])
+     """
+-    diff = np.max(array) - np.min(array)
++    diff = np.max(None) - np.min(array)
+     return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
+# haralick_descriptors.x_normalize_array__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -16,5 +16,5 @@
+                [0.75],
+                [1.  ]])
+     """
+-    diff = np.max(array) - np.min(array)
++    diff = np.max(array) - np.min(None)
+     return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
+# haralick_descriptors.x_normalize_array__mutmut_6: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -17,4 +17,4 @@
+                [1.  ]])
+     """
+     diff = np.max(array) - np.min(array)
+-    return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
++    return (array - np.min(array)) / (1 if diff == 0 else diff) / cap
+# haralick_descriptors.x_normalize_array__mutmut_7: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -17,4 +17,4 @@
+                [1.  ]])
+     """
+     diff = np.max(array) - np.min(array)
+-    return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
++    return (array - np.min(array)) * (1 if diff == 0 else diff) * cap
+# haralick_descriptors.x_normalize_array__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -17,4 +17,4 @@
+                [1.  ]])
+     """
+     diff = np.max(array) - np.min(array)
+-    return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
++    return (array + np.min(array)) / (1 if diff == 0 else diff) * cap
+# haralick_descriptors.x_normalize_array__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -17,4 +17,4 @@
+                [1.  ]])
+     """
+     diff = np.max(array) - np.min(array)
+-    return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
++    return (array - np.min(None)) / (1 if diff == 0 else diff) * cap
+# haralick_descriptors.x_normalize_array__mutmut_10: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -17,4 +17,4 @@
+                [1.  ]])
+     """
+     diff = np.max(array) - np.min(array)
+-    return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
++    return (array - np.min(array)) / (2 if diff == 0 else diff) * cap
+# haralick_descriptors.x_normalize_array__mutmut_11: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -17,4 +17,4 @@
+                [1.  ]])
+     """
+     diff = np.max(array) - np.min(array)
+-    return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
++    return (array - np.min(array)) / (1 if diff != 0 else diff) * cap
+# haralick_descriptors.x_normalize_array__mutmut_12: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -17,4 +17,4 @@
+                [1.  ]])
+     """
+     diff = np.max(array) - np.min(array)
+-    return (array - np.min(array)) / (1 if diff == 0 else diff) * cap
++    return (array - np.min(array)) / (1 if diff == 1 else diff) * cap
+# haralick_descriptors.x_grayscale__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(None)
+# haralick_descriptors.x_grayscale__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot(None, [0.299, 0.587, 0.114]).astype(np.uint8)
+# haralick_descriptors.x_grayscale__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot(image[:, :, 0:3], None).astype(np.uint8)
+# haralick_descriptors.x_grayscale__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot([0.299, 0.587, 0.114]).astype(np.uint8)
+# haralick_descriptors.x_grayscale__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot(image[:, :, 0:3], ).astype(np.uint8)
+# haralick_descriptors.x_grayscale__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot(image[:, :, 1:3], [0.299, 0.587, 0.114]).astype(np.uint8)
+# haralick_descriptors.x_grayscale__mutmut_7: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot(image[:, :, 0:4], [0.299, 0.587, 0.114]).astype(np.uint8)
+# haralick_descriptors.x_grayscale__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot(image[:, :, 0:3], [1.299, 0.587, 0.114]).astype(np.uint8)
+# haralick_descriptors.x_grayscale__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot(image[:, :, 0:3], [0.299, 1.587, 0.114]).astype(np.uint8)
+# haralick_descriptors.x_grayscale__mutmut_10: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         array([[158,  97],
+                [ 56, 200]], dtype=uint8)
+     """
+-    return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
++    return np.dot(image[:, :, 0:3], [0.299, 0.587, 1.114]).astype(np.uint8)
+# haralick_descriptors.x_binarize__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -1,4 +1,4 @@
+-def binarize(image: np.ndarray, threshold: float = 127.0) -> np.ndarray:
++def binarize(image: np.ndarray, threshold: float = 128.0) -> np.ndarray:
+     """
+     Binarizes a grayscale image based on a given threshold value,
+     setting values to 1 or 0 accordingly.
+# haralick_descriptors.x_binarize__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,4 +11,4 @@
+         array([[0, 1],
+                [1, 0]])
+     """
+-    return np.where(image > threshold, 1, 0)
++    return np.where(None, 1, 0)
+# haralick_descriptors.x_binarize__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,4 +11,4 @@
+         array([[0, 1],
+                [1, 0]])
+     """
+-    return np.where(image > threshold, 1, 0)
++    return np.where(image > threshold, None, 0)
+# haralick_descriptors.x_binarize__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,4 +11,4 @@
+         array([[0, 1],
+                [1, 0]])
+     """
+-    return np.where(image > threshold, 1, 0)
++    return np.where(image > threshold, 1, None)
+# haralick_descriptors.x_binarize__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,4 +11,4 @@
+         array([[0, 1],
+                [1, 0]])
+     """
+-    return np.where(image > threshold, 1, 0)
++    return np.where(1, 0)
+# haralick_descriptors.x_binarize__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,4 +11,4 @@
+         array([[0, 1],
+                [1, 0]])
+     """
+-    return np.where(image > threshold, 1, 0)
++    return np.where(image > threshold, 0)
+# haralick_descriptors.x_binarize__mutmut_7: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,4 +11,4 @@
+         array([[0, 1],
+                [1, 0]])
+     """
+-    return np.where(image > threshold, 1, 0)
++    return np.where(image > threshold, 1, )
+# haralick_descriptors.x_binarize__mutmut_8: timeout
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,4 +11,4 @@
+         array([[0, 1],
+                [1, 0]])
+     """
+-    return np.where(image > threshold, 1, 0)
++    return np.where(image >= threshold, 1, 0)
+# haralick_descriptors.x_binarize__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,4 +11,4 @@
+         array([[0, 1],
+                [1, 0]])
+     """
+-    return np.where(image > threshold, 1, 0)
++    return np.where(image > threshold, 2, 0)
+# haralick_descriptors.x_binarize__mutmut_10: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,4 +11,4 @@
+         array([[0, 1],
+                [1, 0]])
+     """
+-    return np.where(image > threshold, 1, 0)
++    return np.where(image > threshold, 1, 1)
+# haralick_descriptors.x_transform__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -26,7 +26,7 @@
+         array([[0, 0],
+                [0, 0]], dtype=uint8)
+     """
+-    if kernel is None:
++    if kernel is not None:
+         kernel = np.ones((3, 3))
+ 
+     if kind == "erosion":
+# haralick_descriptors.x_transform__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,7 +27,7 @@
+                [0, 0]], dtype=uint8)
+     """
+     if kernel is None:
+-        kernel = np.ones((3, 3))
++        kernel = None
+ 
+     if kind == "erosion":
+         constant = 1
+# haralick_descriptors.x_transform__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,7 +27,7 @@
+                [0, 0]], dtype=uint8)
+     """
+     if kernel is None:
+-        kernel = np.ones((3, 3))
++        kernel = np.ones(None)
+ 
+     if kind == "erosion":
+         constant = 1
+# haralick_descriptors.x_transform__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,7 +27,7 @@
+                [0, 0]], dtype=uint8)
+     """
+     if kernel is None:
+-        kernel = np.ones((3, 3))
++        kernel = np.ones((4, 3))
+ 
+     if kind == "erosion":
+         constant = 1
+# haralick_descriptors.x_transform__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,7 +27,7 @@
+                [0, 0]], dtype=uint8)
+     """
+     if kernel is None:
+-        kernel = np.ones((3, 3))
++        kernel = np.ones((3, 4))
+ 
+     if kind == "erosion":
+         constant = 1
+# haralick_descriptors.x_transform__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -29,7 +29,7 @@
+     if kernel is None:
+         kernel = np.ones((3, 3))
+ 
+-    if kind == "erosion":
++    if kind != "erosion":
+         constant = 1
+         apply = np.max
+     else:
+# haralick_descriptors.x_transform__mutmut_7: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -29,7 +29,7 @@
+     if kernel is None:
+         kernel = np.ones((3, 3))
+ 
+-    if kind == "erosion":
++    if kind == "XXerosionXX":
+         constant = 1
+         apply = np.max
+     else:
+# haralick_descriptors.x_transform__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -29,7 +29,7 @@
+     if kernel is None:
+         kernel = np.ones((3, 3))
+ 
+-    if kind == "erosion":
++    if kind == "EROSION":
+         constant = 1
+         apply = np.max
+     else:
+# haralick_descriptors.x_transform__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -30,7 +30,7 @@
+         kernel = np.ones((3, 3))
+ 
+     if kind == "erosion":
+-        constant = 1
++        constant = None
+         apply = np.max
+     else:
+         constant = 0
+# haralick_descriptors.x_transform__mutmut_10: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -30,7 +30,7 @@
+         kernel = np.ones((3, 3))
+ 
+     if kind == "erosion":
+-        constant = 1
++        constant = 2
+         apply = np.max
+     else:
+         constant = 0
+# haralick_descriptors.x_transform__mutmut_11: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -31,7 +31,7 @@
+ 
+     if kind == "erosion":
+         constant = 1
+-        apply = np.max
++        apply = None
+     else:
+         constant = 0
+         apply = np.min
+# haralick_descriptors.x_transform__mutmut_12: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,7 +33,7 @@
+         constant = 1
+         apply = np.max
+     else:
+-        constant = 0
++        constant = None
+         apply = np.min
+ 
+     center_x, center_y = (x // 2 for x in kernel.shape)
+# haralick_descriptors.x_transform__mutmut_13: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,7 +33,7 @@
+         constant = 1
+         apply = np.max
+     else:
+-        constant = 0
++        constant = 1
+         apply = np.min
+ 
+     center_x, center_y = (x // 2 for x in kernel.shape)
+# haralick_descriptors.x_transform__mutmut_14: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -34,7 +34,7 @@
+         apply = np.max
+     else:
+         constant = 0
+-        apply = np.min
++        apply = None
+ 
+     center_x, center_y = (x // 2 for x in kernel.shape)
+ 
+# haralick_descriptors.x_transform__mutmut_15: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -36,7 +36,7 @@
+         constant = 0
+         apply = np.min
+ 
+-    center_x, center_y = (x // 2 for x in kernel.shape)
++    center_x, center_y = None
+ 
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+# haralick_descriptors.x_transform__mutmut_16: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -36,7 +36,7 @@
+         constant = 0
+         apply = np.min
+ 
+-    center_x, center_y = (x // 2 for x in kernel.shape)
++    center_x, center_y = (x / 2 for x in kernel.shape)
+ 
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+# haralick_descriptors.x_transform__mutmut_17: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -36,7 +36,7 @@
+         constant = 0
+         apply = np.min
+ 
+-    center_x, center_y = (x // 2 for x in kernel.shape)
++    center_x, center_y = (x // 3 for x in kernel.shape)
+ 
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+# haralick_descriptors.x_transform__mutmut_18: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -40,7 +40,7 @@
+ 
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+-    transformed = np.zeros(image.shape, dtype=np.uint8)
++    transformed = None
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+# haralick_descriptors.x_transform__mutmut_19: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -40,7 +40,7 @@
+ 
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+-    transformed = np.zeros(image.shape, dtype=np.uint8)
++    transformed = np.zeros(None, dtype=np.uint8)
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+# haralick_descriptors.x_transform__mutmut_20: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -40,7 +40,7 @@
+ 
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+-    transformed = np.zeros(image.shape, dtype=np.uint8)
++    transformed = np.zeros(image.shape, dtype=None)
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+# haralick_descriptors.x_transform__mutmut_21: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -40,7 +40,7 @@
+ 
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+-    transformed = np.zeros(image.shape, dtype=np.uint8)
++    transformed = np.zeros(dtype=np.uint8)
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+# haralick_descriptors.x_transform__mutmut_22: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -40,7 +40,7 @@
+ 
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+-    transformed = np.zeros(image.shape, dtype=np.uint8)
++    transformed = np.zeros(image.shape, )
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+# haralick_descriptors.x_transform__mutmut_23: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = None
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_24: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(None, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_25: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(image, None, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_26: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(image, 1, None, constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_27: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(image, 1, "constant", constant_values=None)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_28: timeout
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_29: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(image, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_30: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(image, 1, constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_31: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(image, 1, "constant", )
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_32: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(image, 2, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_33: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(image, 1, "XXconstantXX", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_34: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -41,7 +41,7 @@
+     # Use padded image when applying convolution
+     # to not go out of bounds of the original the image
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+-    padded = np.pad(image, 1, "constant", constant_values=constant)
++    padded = np.pad(image, 1, "CONSTANT", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+# haralick_descriptors.x_transform__mutmut_35: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -43,7 +43,7 @@
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+-    for x in range(center_x, padded.shape[0] - center_x):
++    for x in range(None, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+# haralick_descriptors.x_transform__mutmut_36: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -43,7 +43,7 @@
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+-    for x in range(center_x, padded.shape[0] - center_x):
++    for x in range(center_x, None):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+# haralick_descriptors.x_transform__mutmut_37: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -43,7 +43,7 @@
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+-    for x in range(center_x, padded.shape[0] - center_x):
++    for x in range(padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+# haralick_descriptors.x_transform__mutmut_38: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -43,7 +43,7 @@
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+-    for x in range(center_x, padded.shape[0] - center_x):
++    for x in range(center_x, ):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+# haralick_descriptors.x_transform__mutmut_39: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -43,7 +43,7 @@
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+-    for x in range(center_x, padded.shape[0] - center_x):
++    for x in range(center_x, padded.shape[0] + center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+# haralick_descriptors.x_transform__mutmut_40: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -43,7 +43,7 @@
+     transformed = np.zeros(image.shape, dtype=np.uint8)
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+-    for x in range(center_x, padded.shape[0] - center_x):
++    for x in range(center_x, padded.shape[1] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+# haralick_descriptors.x_transform__mutmut_41: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -44,7 +44,7 @@
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+-        for y in range(center_y, padded.shape[1] - center_y):
++        for y in range(None, padded.shape[1] - center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+# haralick_descriptors.x_transform__mutmut_42: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -44,7 +44,7 @@
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+-        for y in range(center_y, padded.shape[1] - center_y):
++        for y in range(center_y, None):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+# haralick_descriptors.x_transform__mutmut_43: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -44,7 +44,7 @@
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+-        for y in range(center_y, padded.shape[1] - center_y):
++        for y in range(padded.shape[1] - center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+# haralick_descriptors.x_transform__mutmut_44: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -44,7 +44,7 @@
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+-        for y in range(center_y, padded.shape[1] - center_y):
++        for y in range(center_y, ):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+# haralick_descriptors.x_transform__mutmut_45: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -44,7 +44,7 @@
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+-        for y in range(center_y, padded.shape[1] - center_y):
++        for y in range(center_y, padded.shape[1] + center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+# haralick_descriptors.x_transform__mutmut_46: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -44,7 +44,7 @@
+     padded = np.pad(image, 1, "constant", constant_values=constant)
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+-        for y in range(center_y, padded.shape[1] - center_y):
++        for y in range(center_y, padded.shape[2] - center_y):
+             center = padded[
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+# haralick_descriptors.x_transform__mutmut_47: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -45,9 +45,7 @@
+ 
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+-            center = padded[
+-                x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+-            ]
++            center = None
+             # Apply transformation method to the centered section of the image
+             transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
+ 
+# haralick_descriptors.x_transform__mutmut_48: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -46,7 +46,7 @@
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+-                x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
++                x + center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+             transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
+# haralick_descriptors.x_transform__mutmut_49: timeout
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -46,7 +46,7 @@
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+-                x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
++                x - center_x : x + center_x - 1, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+             transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
+# haralick_descriptors.x_transform__mutmut_50: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -46,7 +46,7 @@
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+-                x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
++                x - center_x : x - center_x + 1, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+             transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
+# haralick_descriptors.x_transform__mutmut_51: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -46,7 +46,7 @@
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+-                x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
++                x - center_x : x + center_x + 2, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+             transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
+# haralick_descriptors.x_transform__mutmut_52: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -46,7 +46,7 @@
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+-                x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
++                x - center_x : x + center_x + 1, y + center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+             transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
+# haralick_descriptors.x_transform__mutmut_53: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -46,7 +46,7 @@
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+-                x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
++                x - center_x : x + center_x + 1, y - center_y : y + center_y - 1
+             ]
+             # Apply transformation method to the centered section of the image
+             transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
+# haralick_descriptors.x_transform__mutmut_54: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -46,7 +46,7 @@
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+-                x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
++                x - center_x : x + center_x + 1, y - center_y : y - center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+             transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
+# haralick_descriptors.x_transform__mutmut_55: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -46,7 +46,7 @@
+     for x in range(center_x, padded.shape[0] - center_x):
+         for y in range(center_y, padded.shape[1] - center_y):
+             center = padded[
+-                x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
++                x - center_x : x + center_x + 1, y - center_y : y + center_y + 2
+             ]
+             # Apply transformation method to the centered section of the image
+             transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
+# haralick_descriptors.x_transform__mutmut_56: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -49,6 +49,6 @@
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+-            transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
++            transformed[x - center_x, y - center_y] = None
+ 
+     return transformed
+# haralick_descriptors.x_transform__mutmut_57: timeout
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -49,6 +49,6 @@
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+-            transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
++            transformed[x + center_x, y - center_y] = apply(center[kernel == 1])
+ 
+     return transformed
+# haralick_descriptors.x_transform__mutmut_58: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -49,6 +49,6 @@
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+-            transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
++            transformed[x - center_x, y + center_y] = apply(center[kernel == 1])
+ 
+     return transformed
+# haralick_descriptors.x_transform__mutmut_59: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -49,6 +49,6 @@
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+-            transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
++            transformed[x - center_x, y - center_y] = apply(None)
+ 
+     return transformed
+# haralick_descriptors.x_transform__mutmut_60: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -49,6 +49,6 @@
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+-            transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
++            transformed[x - center_x, y - center_y] = apply(center[kernel != 1])
+ 
+     return transformed
+# haralick_descriptors.x_transform__mutmut_61: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -49,6 +49,6 @@
+                 x - center_x : x + center_x + 1, y - center_y : y + center_y + 1
+             ]
+             # Apply transformation method to the centered section of the image
+-            transformed[x - center_x, y - center_y] = apply(center[kernel == 1])
++            transformed[x - center_x, y - center_y] = apply(center[kernel == 2])
+ 
+     return transformed
+# haralick_descriptors.x_opening_filter__mutmut_1: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -10,7 +10,7 @@
+         array([[1, 1],
+                [1, 1]], dtype=uint8)
+     """
+-    if kernel is None:
++    if kernel is not None:
+         np.ones((3, 3))
+ 
+     return transform(transform(image, "dilation", kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,6 +11,6 @@
+                [1, 1]], dtype=uint8)
+     """
+     if kernel is None:
+-        np.ones((3, 3))
++        np.ones(None)
+ 
+     return transform(transform(image, "dilation", kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_3: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,6 +11,6 @@
+                [1, 1]], dtype=uint8)
+     """
+     if kernel is None:
+-        np.ones((3, 3))
++        np.ones((4, 3))
+ 
+     return transform(transform(image, "dilation", kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_4: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,6 +11,6 @@
+                [1, 1]], dtype=uint8)
+     """
+     if kernel is None:
+-        np.ones((3, 3))
++        np.ones((3, 4))
+ 
+     return transform(transform(image, "dilation", kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(None, "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "dilation", kernel), None, kernel)
+# haralick_descriptors.x_opening_filter__mutmut_7: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "dilation", kernel), "erosion", None)
+# haralick_descriptors.x_opening_filter__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform("erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "dilation", kernel), kernel)
+# haralick_descriptors.x_opening_filter__mutmut_10: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "dilation", kernel), "erosion", )
+# haralick_descriptors.x_opening_filter__mutmut_11: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(None, "dilation", kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_12: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, None, kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_13: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "dilation", None), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_14: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform("dilation", kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_15: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_16: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "dilation", ), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_17: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "XXdilationXX", kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_18: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "DILATION", kernel), "erosion", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_19: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "dilation", kernel), "XXerosionXX", kernel)
+# haralick_descriptors.x_opening_filter__mutmut_20: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -13,4 +13,4 @@
+     if kernel is None:
+         np.ones((3, 3))
+ 
+-    return transform(transform(image, "dilation", kernel), "erosion", kernel)
++    return transform(transform(image, "dilation", kernel), "EROSION", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_1: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -10,6 +10,6 @@
+         array([[0, 0],
+                [0, 0]], dtype=uint8)
+     """
+-    if kernel is None:
++    if kernel is not None:
+         kernel = np.ones((3, 3))
+     return transform(transform(image, "erosion", kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_2: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,5 +11,5 @@
+                [0, 0]], dtype=uint8)
+     """
+     if kernel is None:
+-        kernel = np.ones((3, 3))
++        kernel = None
+     return transform(transform(image, "erosion", kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,5 +11,5 @@
+                [0, 0]], dtype=uint8)
+     """
+     if kernel is None:
+-        kernel = np.ones((3, 3))
++        kernel = np.ones(None)
+     return transform(transform(image, "erosion", kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_4: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,5 +11,5 @@
+                [0, 0]], dtype=uint8)
+     """
+     if kernel is None:
+-        kernel = np.ones((3, 3))
++        kernel = np.ones((4, 3))
+     return transform(transform(image, "erosion", kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_5: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -11,5 +11,5 @@
+                [0, 0]], dtype=uint8)
+     """
+     if kernel is None:
+-        kernel = np.ones((3, 3))
++        kernel = np.ones((3, 4))
+     return transform(transform(image, "erosion", kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(None, "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_7: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "erosion", kernel), None, kernel)
+# haralick_descriptors.x_closing_filter__mutmut_8: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "erosion", kernel), "dilation", None)
+# haralick_descriptors.x_closing_filter__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform("dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_10: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "erosion", kernel), kernel)
+# haralick_descriptors.x_closing_filter__mutmut_11: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "erosion", kernel), "dilation", )
+# haralick_descriptors.x_closing_filter__mutmut_12: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(None, "erosion", kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_13: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, None, kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_14: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "erosion", None), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_15: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform("erosion", kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_16: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_17: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "erosion", ), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_18: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "XXerosionXX", kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_19: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "EROSION", kernel), "dilation", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_20: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "erosion", kernel), "XXdilationXX", kernel)
+# haralick_descriptors.x_closing_filter__mutmut_21: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -12,4 +12,4 @@
+     """
+     if kernel is None:
+         kernel = np.ones((3, 3))
+-    return transform(transform(image, "erosion", kernel), "dilation", kernel)
++    return transform(transform(image, "erosion", kernel), "DILATION", kernel)
+# haralick_descriptors.x_binary_mask__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -18,7 +18,7 @@
+                [1, 1]], dtype=uint8), array([[158,  97],
+                [ 56, 200]], dtype=uint8))
+     """
+-    true_mask, false_mask = image_gray.copy(), image_gray.copy()
++    true_mask, false_mask = None
+     true_mask[image_map == 1] = 1
+     false_mask[image_map == 0] = 0
+ 
+# haralick_descriptors.x_binary_mask__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -19,7 +19,7 @@
+                [ 56, 200]], dtype=uint8))
+     """
+     true_mask, false_mask = image_gray.copy(), image_gray.copy()
+-    true_mask[image_map == 1] = 1
++    true_mask[image_map == 1] = None
+     false_mask[image_map == 0] = 0
+ 
+     return true_mask, false_mask
+# haralick_descriptors.x_binary_mask__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -19,7 +19,7 @@
+                [ 56, 200]], dtype=uint8))
+     """
+     true_mask, false_mask = image_gray.copy(), image_gray.copy()
+-    true_mask[image_map == 1] = 1
++    true_mask[image_map != 1] = 1
+     false_mask[image_map == 0] = 0
+ 
+     return true_mask, false_mask
+# haralick_descriptors.x_binary_mask__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -19,7 +19,7 @@
+                [ 56, 200]], dtype=uint8))
+     """
+     true_mask, false_mask = image_gray.copy(), image_gray.copy()
+-    true_mask[image_map == 1] = 1
++    true_mask[image_map == 2] = 1
+     false_mask[image_map == 0] = 0
+ 
+     return true_mask, false_mask
+# haralick_descriptors.x_binary_mask__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -19,7 +19,7 @@
+                [ 56, 200]], dtype=uint8))
+     """
+     true_mask, false_mask = image_gray.copy(), image_gray.copy()
+-    true_mask[image_map == 1] = 1
++    true_mask[image_map == 1] = 2
+     false_mask[image_map == 0] = 0
+ 
+     return true_mask, false_mask
+# haralick_descriptors.x_binary_mask__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -20,6 +20,6 @@
+     """
+     true_mask, false_mask = image_gray.copy(), image_gray.copy()
+     true_mask[image_map == 1] = 1
+-    false_mask[image_map == 0] = 0
++    false_mask[image_map == 0] = None
+ 
+     return true_mask, false_mask
+# haralick_descriptors.x_binary_mask__mutmut_7: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -20,6 +20,6 @@
+     """
+     true_mask, false_mask = image_gray.copy(), image_gray.copy()
+     true_mask[image_map == 1] = 1
+-    false_mask[image_map == 0] = 0
++    false_mask[image_map != 0] = 0
+ 
+     return true_mask, false_mask
+# haralick_descriptors.x_binary_mask__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -20,6 +20,6 @@
+     """
+     true_mask, false_mask = image_gray.copy(), image_gray.copy()
+     true_mask[image_map == 1] = 1
+-    false_mask[image_map == 0] = 0
++    false_mask[image_map == 1] = 0
+ 
+     return true_mask, false_mask
+# haralick_descriptors.x_binary_mask__mutmut_9: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -20,6 +20,6 @@
+     """
+     true_mask, false_mask = image_gray.copy(), image_gray.copy()
+     true_mask[image_map == 1] = 1
+-    false_mask[image_map == 0] = 0
++    false_mask[image_map == 0] = 1
+ 
+     return true_mask, false_mask
+# haralick_descriptors.x_matrix_concurrency__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -18,7 +18,7 @@
+         array([[0., 0.],
+                [0., 0.]])
+     """
+-    matrix = np.zeros([np.max(image) + 1, np.max(image) + 1])
++    matrix = None
+ 
+     offset_x, offset_y = coordinate
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -18,7 +18,7 @@
+         array([[0., 0.],
+                [0., 0.]])
+     """
+-    matrix = np.zeros([np.max(image) + 1, np.max(image) + 1])
++    matrix = np.zeros(None)
+ 
+     offset_x, offset_y = coordinate
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -18,7 +18,7 @@
+         array([[0., 0.],
+                [0., 0.]])
+     """
+-    matrix = np.zeros([np.max(image) + 1, np.max(image) + 1])
++    matrix = np.zeros([np.max(image) - 1, np.max(image) + 1])
+ 
+     offset_x, offset_y = coordinate
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -18,7 +18,7 @@
+         array([[0., 0.],
+                [0., 0.]])
+     """
+-    matrix = np.zeros([np.max(image) + 1, np.max(image) + 1])
++    matrix = np.zeros([np.max(None) + 1, np.max(image) + 1])
+ 
+     offset_x, offset_y = coordinate
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -18,7 +18,7 @@
+         array([[0., 0.],
+                [0., 0.]])
+     """
+-    matrix = np.zeros([np.max(image) + 1, np.max(image) + 1])
++    matrix = np.zeros([np.max(image) + 2, np.max(image) + 1])
+ 
+     offset_x, offset_y = coordinate
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -18,7 +18,7 @@
+         array([[0., 0.],
+                [0., 0.]])
+     """
+-    matrix = np.zeros([np.max(image) + 1, np.max(image) + 1])
++    matrix = np.zeros([np.max(image) + 1, np.max(image) - 1])
+ 
+     offset_x, offset_y = coordinate
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_7: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -18,7 +18,7 @@
+         array([[0., 0.],
+                [0., 0.]])
+     """
+-    matrix = np.zeros([np.max(image) + 1, np.max(image) + 1])
++    matrix = np.zeros([np.max(image) + 1, np.max(None) + 1])
+ 
+     offset_x, offset_y = coordinate
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -18,7 +18,7 @@
+         array([[0., 0.],
+                [0., 0.]])
+     """
+-    matrix = np.zeros([np.max(image) + 1, np.max(image) + 1])
++    matrix = np.zeros([np.max(image) + 1, np.max(image) + 2])
+ 
+     offset_x, offset_y = coordinate
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -20,7 +20,7 @@
+     """
+     matrix = np.zeros([np.max(image) + 1, np.max(image) + 1])
+ 
+-    offset_x, offset_y = coordinate
++    offset_x, offset_y = None
+ 
+     for x in range(1, image.shape[0] - 1):
+         for y in range(1, image.shape[1] - 1):
+# haralick_descriptors.x_matrix_concurrency__mutmut_10: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -22,7 +22,7 @@
+ 
+     offset_x, offset_y = coordinate
+ 
+-    for x in range(1, image.shape[0] - 1):
++    for x in range(None, image.shape[0] - 1):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+# haralick_descriptors.x_matrix_concurrency__mutmut_11: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -22,7 +22,7 @@
+ 
+     offset_x, offset_y = coordinate
+ 
+-    for x in range(1, image.shape[0] - 1):
++    for x in range(1, None):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+# haralick_descriptors.x_matrix_concurrency__mutmut_12: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -22,7 +22,7 @@
+ 
+     offset_x, offset_y = coordinate
+ 
+-    for x in range(1, image.shape[0] - 1):
++    for x in range(image.shape[0] - 1):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+# haralick_descriptors.x_matrix_concurrency__mutmut_13: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -22,7 +22,7 @@
+ 
+     offset_x, offset_y = coordinate
+ 
+-    for x in range(1, image.shape[0] - 1):
++    for x in range(1, ):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+# haralick_descriptors.x_matrix_concurrency__mutmut_14: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -22,7 +22,7 @@
+ 
+     offset_x, offset_y = coordinate
+ 
+-    for x in range(1, image.shape[0] - 1):
++    for x in range(2, image.shape[0] - 1):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+# haralick_descriptors.x_matrix_concurrency__mutmut_15: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -22,7 +22,7 @@
+ 
+     offset_x, offset_y = coordinate
+ 
+-    for x in range(1, image.shape[0] - 1):
++    for x in range(1, image.shape[0] + 1):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+# haralick_descriptors.x_matrix_concurrency__mutmut_16: timeout
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -22,7 +22,7 @@
+ 
+     offset_x, offset_y = coordinate
+ 
+-    for x in range(1, image.shape[0] - 1):
++    for x in range(1, image.shape[1] - 1):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+# haralick_descriptors.x_matrix_concurrency__mutmut_17: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -22,7 +22,7 @@
+ 
+     offset_x, offset_y = coordinate
+ 
+-    for x in range(1, image.shape[0] - 1):
++    for x in range(1, image.shape[0] - 2):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+# haralick_descriptors.x_matrix_concurrency__mutmut_18: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     offset_x, offset_y = coordinate
+ 
+     for x in range(1, image.shape[0] - 1):
+-        for y in range(1, image.shape[1] - 1):
++        for y in range(None, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_19: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     offset_x, offset_y = coordinate
+ 
+     for x in range(1, image.shape[0] - 1):
+-        for y in range(1, image.shape[1] - 1):
++        for y in range(1, None):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_20: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     offset_x, offset_y = coordinate
+ 
+     for x in range(1, image.shape[0] - 1):
+-        for y in range(1, image.shape[1] - 1):
++        for y in range(image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_21: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     offset_x, offset_y = coordinate
+ 
+     for x in range(1, image.shape[0] - 1):
+-        for y in range(1, image.shape[1] - 1):
++        for y in range(1, ):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_22: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     offset_x, offset_y = coordinate
+ 
+     for x in range(1, image.shape[0] - 1):
+-        for y in range(1, image.shape[1] - 1):
++        for y in range(2, image.shape[1] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_23: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     offset_x, offset_y = coordinate
+ 
+     for x in range(1, image.shape[0] - 1):
+-        for y in range(1, image.shape[1] - 1):
++        for y in range(1, image.shape[1] + 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_24: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     offset_x, offset_y = coordinate
+ 
+     for x in range(1, image.shape[0] - 1):
+-        for y in range(1, image.shape[1] - 1):
++        for y in range(1, image.shape[2] - 1):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_25: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     offset_x, offset_y = coordinate
+ 
+     for x in range(1, image.shape[0] - 1):
+-        for y in range(1, image.shape[1] - 1):
++        for y in range(1, image.shape[1] - 2):
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+# haralick_descriptors.x_matrix_concurrency__mutmut_26: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -24,7 +24,7 @@
+ 
+     for x in range(1, image.shape[0] - 1):
+         for y in range(1, image.shape[1] - 1):
+-            base_pixel = image[x, y]
++            base_pixel = None
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+             matrix[base_pixel, offset_pixel] += 1
+# haralick_descriptors.x_matrix_concurrency__mutmut_27: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -25,7 +25,7 @@
+     for x in range(1, image.shape[0] - 1):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+-            offset_pixel = image[x + offset_x, y + offset_y]
++            offset_pixel = None
+ 
+             matrix[base_pixel, offset_pixel] += 1
+     matrix_sum = np.sum(matrix)
+# haralick_descriptors.x_matrix_concurrency__mutmut_28: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -25,7 +25,7 @@
+     for x in range(1, image.shape[0] - 1):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+-            offset_pixel = image[x + offset_x, y + offset_y]
++            offset_pixel = image[x - offset_x, y + offset_y]
+ 
+             matrix[base_pixel, offset_pixel] += 1
+     matrix_sum = np.sum(matrix)
+# haralick_descriptors.x_matrix_concurrency__mutmut_29: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -25,7 +25,7 @@
+     for x in range(1, image.shape[0] - 1):
+         for y in range(1, image.shape[1] - 1):
+             base_pixel = image[x, y]
+-            offset_pixel = image[x + offset_x, y + offset_y]
++            offset_pixel = image[x + offset_x, y - offset_y]
+ 
+             matrix[base_pixel, offset_pixel] += 1
+     matrix_sum = np.sum(matrix)
+# haralick_descriptors.x_matrix_concurrency__mutmut_30: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,6 +27,6 @@
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+-            matrix[base_pixel, offset_pixel] += 1
++            matrix[base_pixel, offset_pixel] = 1
+     matrix_sum = np.sum(matrix)
+     return matrix / (1 if matrix_sum == 0 else matrix_sum)
+# haralick_descriptors.x_matrix_concurrency__mutmut_31: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,6 +27,6 @@
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+-            matrix[base_pixel, offset_pixel] += 1
++            matrix[base_pixel, offset_pixel] -= 1
+     matrix_sum = np.sum(matrix)
+     return matrix / (1 if matrix_sum == 0 else matrix_sum)
+# haralick_descriptors.x_matrix_concurrency__mutmut_32: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,6 +27,6 @@
+             base_pixel = image[x, y]
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+-            matrix[base_pixel, offset_pixel] += 1
++            matrix[base_pixel, offset_pixel] += 2
+     matrix_sum = np.sum(matrix)
+     return matrix / (1 if matrix_sum == 0 else matrix_sum)
+# haralick_descriptors.x_matrix_concurrency__mutmut_33: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -28,5 +28,5 @@
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+             matrix[base_pixel, offset_pixel] += 1
+-    matrix_sum = np.sum(matrix)
++    matrix_sum = None
+     return matrix / (1 if matrix_sum == 0 else matrix_sum)
+# haralick_descriptors.x_matrix_concurrency__mutmut_34: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -28,5 +28,5 @@
+             offset_pixel = image[x + offset_x, y + offset_y]
+ 
+             matrix[base_pixel, offset_pixel] += 1
+-    matrix_sum = np.sum(matrix)
++    matrix_sum = np.sum(None)
+     return matrix / (1 if matrix_sum == 0 else matrix_sum)
+# haralick_descriptors.x_matrix_concurrency__mutmut_35: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -29,4 +29,4 @@
+ 
+             matrix[base_pixel, offset_pixel] += 1
+     matrix_sum = np.sum(matrix)
+-    return matrix / (1 if matrix_sum == 0 else matrix_sum)
++    return matrix * (1 if matrix_sum == 0 else matrix_sum)
+# haralick_descriptors.x_matrix_concurrency__mutmut_36: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -29,4 +29,4 @@
+ 
+             matrix[base_pixel, offset_pixel] += 1
+     matrix_sum = np.sum(matrix)
+-    return matrix / (1 if matrix_sum == 0 else matrix_sum)
++    return matrix / (2 if matrix_sum == 0 else matrix_sum)
+# haralick_descriptors.x_matrix_concurrency__mutmut_37: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -29,4 +29,4 @@
+ 
+             matrix[base_pixel, offset_pixel] += 1
+     matrix_sum = np.sum(matrix)
+-    return matrix / (1 if matrix_sum == 0 else matrix_sum)
++    return matrix / (1 if matrix_sum != 0 else matrix_sum)
+# haralick_descriptors.x_matrix_concurrency__mutmut_38: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -29,4 +29,4 @@
+ 
+             matrix[base_pixel, offset_pixel] += 1
+     matrix_sum = np.sum(matrix)
+-    return matrix / (1 if matrix_sum == 0 else matrix_sum)
++    return matrix / (1 if matrix_sum == 1 else matrix_sum)
+# haralick_descriptors.x_haralick_descriptors__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     """
+     # Function np.indices could be used for bigger input types,
+     # but np.ogrid works just fine
+-    i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
++    i, j = None  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+# haralick_descriptors.x_haralick_descriptors__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     """
+     # Function np.indices could be used for bigger input types,
+     # but np.ogrid works just fine
+-    i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
++    i, j = np.ogrid[1 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+# haralick_descriptors.x_haralick_descriptors__mutmut_3: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     """
+     # Function np.indices could be used for bigger input types,
+     # but np.ogrid works just fine
+-    i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
++    i, j = np.ogrid[0 : matrix.shape[1], 0 : matrix.shape[1]]  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+# haralick_descriptors.x_haralick_descriptors__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     """
+     # Function np.indices could be used for bigger input types,
+     # but np.ogrid works just fine
+-    i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
++    i, j = np.ogrid[0 : matrix.shape[0], 1 : matrix.shape[1]]  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+# haralick_descriptors.x_haralick_descriptors__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -23,7 +23,7 @@
+     """
+     # Function np.indices could be used for bigger input types,
+     # but np.ogrid works just fine
+-    i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
++    i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[2]]  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+# haralick_descriptors.x_haralick_descriptors__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -26,7 +26,7 @@
+     i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+-    prod = np.multiply(i, j)
++    prod = None
+     sub = np.subtract(i, j)
+ 
+     # Calculate numerical value of Maximum Probability
+# haralick_descriptors.x_haralick_descriptors__mutmut_7: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -26,7 +26,7 @@
+     i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+-    prod = np.multiply(i, j)
++    prod = np.multiply(None, j)
+     sub = np.subtract(i, j)
+ 
+     # Calculate numerical value of Maximum Probability
+# haralick_descriptors.x_haralick_descriptors__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -26,7 +26,7 @@
+     i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+-    prod = np.multiply(i, j)
++    prod = np.multiply(i, None)
+     sub = np.subtract(i, j)
+ 
+     # Calculate numerical value of Maximum Probability
+# haralick_descriptors.x_haralick_descriptors__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -26,7 +26,7 @@
+     i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+-    prod = np.multiply(i, j)
++    prod = np.multiply(j)
+     sub = np.subtract(i, j)
+ 
+     # Calculate numerical value of Maximum Probability
+# haralick_descriptors.x_haralick_descriptors__mutmut_10: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -26,7 +26,7 @@
+     i, j = np.ogrid[0 : matrix.shape[0], 0 : matrix.shape[1]]  # np.indices()
+ 
+     # Pre-calculate frequent multiplication and subtraction
+-    prod = np.multiply(i, j)
++    prod = np.multiply(i, )
+     sub = np.subtract(i, j)
+ 
+     # Calculate numerical value of Maximum Probability
+# haralick_descriptors.x_haralick_descriptors__mutmut_11: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,7 +27,7 @@
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+-    sub = np.subtract(i, j)
++    sub = None
+ 
+     # Calculate numerical value of Maximum Probability
+     maximum_prob = np.max(matrix)
+# haralick_descriptors.x_haralick_descriptors__mutmut_12: timeout
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,7 +27,7 @@
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+-    sub = np.subtract(i, j)
++    sub = np.subtract(None, j)
+ 
+     # Calculate numerical value of Maximum Probability
+     maximum_prob = np.max(matrix)
+# haralick_descriptors.x_haralick_descriptors__mutmut_13: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,7 +27,7 @@
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+-    sub = np.subtract(i, j)
++    sub = np.subtract(i, None)
+ 
+     # Calculate numerical value of Maximum Probability
+     maximum_prob = np.max(matrix)
+# haralick_descriptors.x_haralick_descriptors__mutmut_14: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,7 +27,7 @@
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+-    sub = np.subtract(i, j)
++    sub = np.subtract(j)
+ 
+     # Calculate numerical value of Maximum Probability
+     maximum_prob = np.max(matrix)
+# haralick_descriptors.x_haralick_descriptors__mutmut_15: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,7 +27,7 @@
+ 
+     # Pre-calculate frequent multiplication and subtraction
+     prod = np.multiply(i, j)
+-    sub = np.subtract(i, j)
++    sub = np.subtract(i, )
+ 
+     # Calculate numerical value of Maximum Probability
+     maximum_prob = np.max(matrix)
+# haralick_descriptors.x_haralick_descriptors__mutmut_16: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -30,7 +30,7 @@
+     sub = np.subtract(i, j)
+ 
+     # Calculate numerical value of Maximum Probability
+-    maximum_prob = np.max(matrix)
++    maximum_prob = None
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+     energy = np.power(matrix, 2)
+# haralick_descriptors.x_haralick_descriptors__mutmut_17: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -30,7 +30,7 @@
+     sub = np.subtract(i, j)
+ 
+     # Calculate numerical value of Maximum Probability
+-    maximum_prob = np.max(matrix)
++    maximum_prob = np.max(None)
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+     energy = np.power(matrix, 2)
+# haralick_descriptors.x_haralick_descriptors__mutmut_18: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -32,7 +32,7 @@
+     # Calculate numerical value of Maximum Probability
+     maximum_prob = np.max(matrix)
+     # Using the definition for each descriptor individually to calculate its matrix
+-    correlation = prod * matrix
++    correlation = None
+     energy = np.power(matrix, 2)
+     contrast = matrix * np.power(sub, 2)
+ 
+# haralick_descriptors.x_haralick_descriptors__mutmut_19: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -32,7 +32,7 @@
+     # Calculate numerical value of Maximum Probability
+     maximum_prob = np.max(matrix)
+     # Using the definition for each descriptor individually to calculate its matrix
+-    correlation = prod * matrix
++    correlation = prod / matrix
+     energy = np.power(matrix, 2)
+     contrast = matrix * np.power(sub, 2)
+ 
+# haralick_descriptors.x_haralick_descriptors__mutmut_20: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,7 +33,7 @@
+     maximum_prob = np.max(matrix)
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+-    energy = np.power(matrix, 2)
++    energy = None
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+# haralick_descriptors.x_haralick_descriptors__mutmut_21: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,7 +33,7 @@
+     maximum_prob = np.max(matrix)
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+-    energy = np.power(matrix, 2)
++    energy = np.power(None, 2)
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+# haralick_descriptors.x_haralick_descriptors__mutmut_22: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,7 +33,7 @@
+     maximum_prob = np.max(matrix)
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+-    energy = np.power(matrix, 2)
++    energy = np.power(matrix, None)
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+# haralick_descriptors.x_haralick_descriptors__mutmut_23: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,7 +33,7 @@
+     maximum_prob = np.max(matrix)
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+-    energy = np.power(matrix, 2)
++    energy = np.power(2)
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+# haralick_descriptors.x_haralick_descriptors__mutmut_24: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,7 +33,7 @@
+     maximum_prob = np.max(matrix)
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+-    energy = np.power(matrix, 2)
++    energy = np.power(matrix, )
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+# haralick_descriptors.x_haralick_descriptors__mutmut_25: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,7 +33,7 @@
+     maximum_prob = np.max(matrix)
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+-    energy = np.power(matrix, 2)
++    energy = np.power(matrix, 3)
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+# haralick_descriptors.x_haralick_descriptors__mutmut_26: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -34,7 +34,7 @@
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+     energy = np.power(matrix, 2)
+-    contrast = matrix * np.power(sub, 2)
++    contrast = None
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+# haralick_descriptors.x_haralick_descriptors__mutmut_27: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -34,7 +34,7 @@
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+     energy = np.power(matrix, 2)
+-    contrast = matrix * np.power(sub, 2)
++    contrast = matrix / np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+# haralick_descriptors.x_haralick_descriptors__mutmut_28: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -34,7 +34,7 @@
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+     energy = np.power(matrix, 2)
+-    contrast = matrix * np.power(sub, 2)
++    contrast = matrix * np.power(None, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+# haralick_descriptors.x_haralick_descriptors__mutmut_29: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -34,7 +34,7 @@
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+     energy = np.power(matrix, 2)
+-    contrast = matrix * np.power(sub, 2)
++    contrast = matrix * np.power(sub, None)
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+# haralick_descriptors.x_haralick_descriptors__mutmut_30: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -34,7 +34,7 @@
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+     energy = np.power(matrix, 2)
+-    contrast = matrix * np.power(sub, 2)
++    contrast = matrix * np.power(2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+# haralick_descriptors.x_haralick_descriptors__mutmut_31: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -34,7 +34,7 @@
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+     energy = np.power(matrix, 2)
+-    contrast = matrix * np.power(sub, 2)
++    contrast = matrix * np.power(sub, )
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+# haralick_descriptors.x_haralick_descriptors__mutmut_32: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -34,7 +34,7 @@
+     # Using the definition for each descriptor individually to calculate its matrix
+     correlation = prod * matrix
+     energy = np.power(matrix, 2)
+-    contrast = matrix * np.power(sub, 2)
++    contrast = matrix * np.power(sub, 3)
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+# haralick_descriptors.x_haralick_descriptors__mutmut_33: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -36,7 +36,7 @@
+     energy = np.power(matrix, 2)
+     contrast = matrix * np.power(sub, 2)
+ 
+-    dissimilarity = matrix * np.abs(sub)
++    dissimilarity = None
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+# haralick_descriptors.x_haralick_descriptors__mutmut_34: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -36,7 +36,7 @@
+     energy = np.power(matrix, 2)
+     contrast = matrix * np.power(sub, 2)
+ 
+-    dissimilarity = matrix * np.abs(sub)
++    dissimilarity = matrix / np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+# haralick_descriptors.x_haralick_descriptors__mutmut_35: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -36,7 +36,7 @@
+     energy = np.power(matrix, 2)
+     contrast = matrix * np.power(sub, 2)
+ 
+-    dissimilarity = matrix * np.abs(sub)
++    dissimilarity = matrix * np.abs(None)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+# haralick_descriptors.x_haralick_descriptors__mutmut_36: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -37,7 +37,7 @@
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+-    inverse_difference = matrix / (1 + np.abs(sub))
++    inverse_difference = None
+     homogeneity = matrix / (1 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+# haralick_descriptors.x_haralick_descriptors__mutmut_37: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -37,7 +37,7 @@
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+-    inverse_difference = matrix / (1 + np.abs(sub))
++    inverse_difference = matrix * (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+# haralick_descriptors.x_haralick_descriptors__mutmut_38: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -37,7 +37,7 @@
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+-    inverse_difference = matrix / (1 + np.abs(sub))
++    inverse_difference = matrix / (1 - np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+# haralick_descriptors.x_haralick_descriptors__mutmut_39: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -37,7 +37,7 @@
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+-    inverse_difference = matrix / (1 + np.abs(sub))
++    inverse_difference = matrix / (2 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+# haralick_descriptors.x_haralick_descriptors__mutmut_40: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -37,7 +37,7 @@
+     contrast = matrix * np.power(sub, 2)
+ 
+     dissimilarity = matrix * np.abs(sub)
+-    inverse_difference = matrix / (1 + np.abs(sub))
++    inverse_difference = matrix / (1 + np.abs(None))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+# haralick_descriptors.x_haralick_descriptors__mutmut_41: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -38,7 +38,7 @@
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+-    homogeneity = matrix / (1 + np.power(sub, 2))
++    homogeneity = None
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+# haralick_descriptors.x_haralick_descriptors__mutmut_42: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -38,7 +38,7 @@
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+-    homogeneity = matrix / (1 + np.power(sub, 2))
++    homogeneity = matrix * (1 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+# haralick_descriptors.x_haralick_descriptors__mutmut_43: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -38,7 +38,7 @@
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+-    homogeneity = matrix / (1 + np.power(sub, 2))
++    homogeneity = matrix / (1 - np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+# haralick_descriptors.x_haralick_descriptors__mutmut_44: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -38,7 +38,7 @@
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+-    homogeneity = matrix / (1 + np.power(sub, 2))
++    homogeneity = matrix / (2 + np.power(sub, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+# haralick_descriptors.x_haralick_descriptors__mutmut_45: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -38,7 +38,7 @@
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+-    homogeneity = matrix / (1 + np.power(sub, 2))
++    homogeneity = matrix / (1 + np.power(None, 2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+# haralick_descriptors.x_haralick_descriptors__mutmut_46: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -38,7 +38,7 @@
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+-    homogeneity = matrix / (1 + np.power(sub, 2))
++    homogeneity = matrix / (1 + np.power(sub, None))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+# haralick_descriptors.x_haralick_descriptors__mutmut_47: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -38,7 +38,7 @@
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+-    homogeneity = matrix / (1 + np.power(sub, 2))
++    homogeneity = matrix / (1 + np.power(2))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+# haralick_descriptors.x_haralick_descriptors__mutmut_48: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -38,7 +38,7 @@
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+-    homogeneity = matrix / (1 + np.power(sub, 2))
++    homogeneity = matrix / (1 + np.power(sub, ))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+# haralick_descriptors.x_haralick_descriptors__mutmut_49: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -38,7 +38,7 @@
+ 
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+-    homogeneity = matrix / (1 + np.power(sub, 2))
++    homogeneity = matrix / (1 + np.power(sub, 3))
+     entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+# haralick_descriptors.x_haralick_descriptors__mutmut_50: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -39,7 +39,7 @@
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+-    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
++    entropy = None
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+     # as all are their respective origin matrix and not the resulting value yet.
+# haralick_descriptors.x_haralick_descriptors__mutmut_51: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -39,7 +39,7 @@
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+-    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
++    entropy = +(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+     # as all are their respective origin matrix and not the resulting value yet.
+# haralick_descriptors.x_haralick_descriptors__mutmut_52: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -39,7 +39,7 @@
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+-    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
++    entropy = -(matrix[matrix > 0] / np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+     # as all are their respective origin matrix and not the resulting value yet.
+# haralick_descriptors.x_haralick_descriptors__mutmut_53: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -39,7 +39,7 @@
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+-    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
++    entropy = -(matrix[matrix >= 0] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+     # as all are their respective origin matrix and not the resulting value yet.
+# haralick_descriptors.x_haralick_descriptors__mutmut_54: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -39,7 +39,7 @@
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+-    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
++    entropy = -(matrix[matrix > 1] * np.log(matrix[matrix > 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+     # as all are their respective origin matrix and not the resulting value yet.
+# haralick_descriptors.x_haralick_descriptors__mutmut_55: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -39,7 +39,7 @@
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+-    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
++    entropy = -(matrix[matrix > 0] * np.log(None))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+     # as all are their respective origin matrix and not the resulting value yet.
+# haralick_descriptors.x_haralick_descriptors__mutmut_56: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -39,7 +39,7 @@
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+-    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
++    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix >= 0]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+     # as all are their respective origin matrix and not the resulting value yet.
+# haralick_descriptors.x_haralick_descriptors__mutmut_57: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -39,7 +39,7 @@
+     dissimilarity = matrix * np.abs(sub)
+     inverse_difference = matrix / (1 + np.abs(sub))
+     homogeneity = matrix / (1 + np.power(sub, 2))
+-    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 0]))
++    entropy = -(matrix[matrix > 0] * np.log(matrix[matrix > 1]))
+ 
+     # Sum values for descriptors ranging from the first one to the last,
+     # as all are their respective origin matrix and not the resulting value yet.
+# haralick_descriptors.x_get_descriptors__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -14,9 +14,7 @@
+         >>> get_descriptors(binary_mask(gray, morphological), (0, 1))
+         array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+     """
+-    descriptors = np.array(
+-        [haralick_descriptors(matrix_concurrency(mask, coordinate)) for mask in masks]
+-    )
++    descriptors = None
+ 
+     # Concatenate each individual descriptor into
+     # one single list containing sequence of descriptors
+# haralick_descriptors.x_get_descriptors__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -15,7 +15,7 @@
+         array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+     """
+     descriptors = np.array(
+-        [haralick_descriptors(matrix_concurrency(mask, coordinate)) for mask in masks]
++        None
+     )
+ 
+     # Concatenate each individual descriptor into
+# haralick_descriptors.x_get_descriptors__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -15,7 +15,7 @@
+         array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+     """
+     descriptors = np.array(
+-        [haralick_descriptors(matrix_concurrency(mask, coordinate)) for mask in masks]
++        [haralick_descriptors(None) for mask in masks]
+     )
+ 
+     # Concatenate each individual descriptor into
+# haralick_descriptors.x_get_descriptors__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -15,7 +15,7 @@
+         array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+     """
+     descriptors = np.array(
+-        [haralick_descriptors(matrix_concurrency(mask, coordinate)) for mask in masks]
++        [haralick_descriptors(matrix_concurrency(None, coordinate)) for mask in masks]
+     )
+ 
+     # Concatenate each individual descriptor into
+# haralick_descriptors.x_get_descriptors__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -15,7 +15,7 @@
+         array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+     """
+     descriptors = np.array(
+-        [haralick_descriptors(matrix_concurrency(mask, coordinate)) for mask in masks]
++        [haralick_descriptors(matrix_concurrency(mask, None)) for mask in masks]
+     )
+ 
+     # Concatenate each individual descriptor into
+# haralick_descriptors.x_get_descriptors__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -15,7 +15,7 @@
+         array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+     """
+     descriptors = np.array(
+-        [haralick_descriptors(matrix_concurrency(mask, coordinate)) for mask in masks]
++        [haralick_descriptors(matrix_concurrency(coordinate)) for mask in masks]
+     )
+ 
+     # Concatenate each individual descriptor into
+# haralick_descriptors.x_get_descriptors__mutmut_7: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -15,7 +15,7 @@
+         array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+     """
+     descriptors = np.array(
+-        [haralick_descriptors(matrix_concurrency(mask, coordinate)) for mask in masks]
++        [haralick_descriptors(matrix_concurrency(mask, )) for mask in masks]
+     )
+ 
+     # Concatenate each individual descriptor into
+# haralick_descriptors.x_get_descriptors__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -20,4 +20,4 @@
+ 
+     # Concatenate each individual descriptor into
+     # one single list containing sequence of descriptors
+-    return np.concatenate(descriptors, axis=None)
++    return np.concatenate(None, axis=None)
+# haralick_descriptors.x_get_descriptors__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -20,4 +20,4 @@
+ 
+     # Concatenate each individual descriptor into
+     # one single list containing sequence of descriptors
+-    return np.concatenate(descriptors, axis=None)
++    return np.concatenate(axis=None)
+# haralick_descriptors.x_get_descriptors__mutmut_10: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -20,4 +20,4 @@
+ 
+     # Concatenate each individual descriptor into
+     # one single list containing sequence of descriptors
+-    return np.concatenate(descriptors, axis=None)
++    return np.concatenate(descriptors, )
+# haralick_descriptors.x_euclidean__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         >>> euclidean(a, b)
+         3.3166247903554
+     """
+-    return float(np.sqrt(np.sum(np.square(point_1 - point_2))))
++    return float(None)
+# haralick_descriptors.x_euclidean__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         >>> euclidean(a, b)
+         3.3166247903554
+     """
+-    return float(np.sqrt(np.sum(np.square(point_1 - point_2))))
++    return float(np.sqrt(None))
+# haralick_descriptors.x_euclidean__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         >>> euclidean(a, b)
+         3.3166247903554
+     """
+-    return float(np.sqrt(np.sum(np.square(point_1 - point_2))))
++    return float(np.sqrt(np.sum(None)))
+# haralick_descriptors.x_euclidean__mutmut_4: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         >>> euclidean(a, b)
+         3.3166247903554
+     """
+-    return float(np.sqrt(np.sum(np.square(point_1 - point_2))))
++    return float(np.sqrt(np.sum(np.square(None))))
+# haralick_descriptors.x_euclidean__mutmut_5: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -9,4 +9,4 @@
+         >>> euclidean(a, b)
+         3.3166247903554
+     """
+-    return float(np.sqrt(np.sum(np.square(point_1 - point_2))))
++    return float(np.sqrt(np.sum(np.square(point_1 + point_2))))
+# haralick_descriptors.x_get_distances__mutmut_1: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -27,9 +27,7 @@
+ (6, 0.0), (7, 0.0), (8, 0.0), (9, 0.0), (10, 0.0), (11, 0.0), (12, 0.0), \
+ (13, 0.0), (14, 0.0), (15, 0.0)]
+     """
+-    distances = np.array(
+-        [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
+-    )
++    distances = None
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+# haralick_descriptors.x_get_distances__mutmut_2: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -28,7 +28,7 @@
+ (13, 0.0), (14, 0.0), (15, 0.0)]
+     """
+     distances = np.array(
+-        [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
++        None
+     )
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+# haralick_descriptors.x_get_distances__mutmut_3: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -28,7 +28,7 @@
+ (13, 0.0), (14, 0.0), (15, 0.0)]
+     """
+     distances = np.array(
+-        [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
++        [euclidean(None, descriptors[base]) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+# haralick_descriptors.x_get_distances__mutmut_4: timeout
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -28,7 +28,7 @@
+ (13, 0.0), (14, 0.0), (15, 0.0)]
+     """
+     distances = np.array(
+-        [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
++        [euclidean(descriptor, None) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+# haralick_descriptors.x_get_distances__mutmut_5: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -28,7 +28,7 @@
+ (13, 0.0), (14, 0.0), (15, 0.0)]
+     """
+     distances = np.array(
+-        [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
++        [euclidean(descriptors[base]) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+# haralick_descriptors.x_get_distances__mutmut_6: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -28,7 +28,7 @@
+ (13, 0.0), (14, 0.0), (15, 0.0)]
+     """
+     distances = np.array(
+-        [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
++        [euclidean(descriptor, ) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+# haralick_descriptors.x_get_distances__mutmut_7: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -31,7 +31,7 @@
+         [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+-    normalized_distances: list[float] = normalize_array(distances, 1).tolist()
++    normalized_distances: list[float] = None
+     enum_distances = list(enumerate(normalized_distances))
+     enum_distances.sort(key=lambda tup: tup[1], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_8: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -31,7 +31,7 @@
+         [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+-    normalized_distances: list[float] = normalize_array(distances, 1).tolist()
++    normalized_distances: list[float] = normalize_array(None, 1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+     enum_distances.sort(key=lambda tup: tup[1], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_9: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -31,7 +31,7 @@
+         [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+-    normalized_distances: list[float] = normalize_array(distances, 1).tolist()
++    normalized_distances: list[float] = normalize_array(distances, None).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+     enum_distances.sort(key=lambda tup: tup[1], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_10: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -31,7 +31,7 @@
+         [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+-    normalized_distances: list[float] = normalize_array(distances, 1).tolist()
++    normalized_distances: list[float] = normalize_array(1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+     enum_distances.sort(key=lambda tup: tup[1], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_11: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -31,7 +31,7 @@
+         [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+-    normalized_distances: list[float] = normalize_array(distances, 1).tolist()
++    normalized_distances: list[float] = normalize_array(distances, ).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+     enum_distances.sort(key=lambda tup: tup[1], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_12: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -31,7 +31,7 @@
+         [euclidean(descriptor, descriptors[base]) for descriptor in descriptors]
+     )
+     # Normalize distances between range [0, 1]
+-    normalized_distances: list[float] = normalize_array(distances, 1).tolist()
++    normalized_distances: list[float] = normalize_array(distances, 2).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+     enum_distances.sort(key=lambda tup: tup[1], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_13: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -32,6 +32,6 @@
+     )
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+-    enum_distances = list(enumerate(normalized_distances))
++    enum_distances = None
+     enum_distances.sort(key=lambda tup: tup[1], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_14: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -32,6 +32,6 @@
+     )
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+-    enum_distances = list(enumerate(normalized_distances))
++    enum_distances = list(None)
+     enum_distances.sort(key=lambda tup: tup[1], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_15: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -32,6 +32,6 @@
+     )
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+-    enum_distances = list(enumerate(normalized_distances))
++    enum_distances = list(enumerate(None))
+     enum_distances.sort(key=lambda tup: tup[1], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_16: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,5 +33,5 @@
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+-    enum_distances.sort(key=lambda tup: tup[1], reverse=True)
++    enum_distances.sort(key=None, reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_17: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,5 +33,5 @@
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+-    enum_distances.sort(key=lambda tup: tup[1], reverse=True)
++    enum_distances.sort(key=lambda tup: tup[1], reverse=None)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_18: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,5 +33,5 @@
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+-    enum_distances.sort(key=lambda tup: tup[1], reverse=True)
++    enum_distances.sort(reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_19: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,5 +33,5 @@
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+-    enum_distances.sort(key=lambda tup: tup[1], reverse=True)
++    enum_distances.sort(key=lambda tup: tup[1], )
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_20: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,5 +33,5 @@
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+-    enum_distances.sort(key=lambda tup: tup[1], reverse=True)
++    enum_distances.sort(key=lambda tup: None, reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_21: killed
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,5 +33,5 @@
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+-    enum_distances.sort(key=lambda tup: tup[1], reverse=True)
++    enum_distances.sort(key=lambda tup: tup[2], reverse=True)
+     return enum_distances
+# haralick_descriptors.x_get_distances__mutmut_22: survived
+--- haralick_descriptors.py
++++ haralick_descriptors.py
+@@ -33,5 +33,5 @@
+     # Normalize distances between range [0, 1]
+     normalized_distances: list[float] = normalize_array(distances, 1).tolist()
+     enum_distances = list(enumerate(normalized_distances))
+-    enum_distances.sort(key=lambda tup: tup[1], reverse=True)
++    enum_distances.sort(key=lambda tup: tup[1], reverse=False)
+     return enum_distances
